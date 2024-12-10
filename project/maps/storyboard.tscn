@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkrmm0i7y20xa"]
+
+[ext_resource type="PackedScene" uid="uid://yiuni3wf04ak" path="res://maps/scenes/loop1/loop1_sceen1_pocketwatch.tscn" id="1_x5464"]
+
+[node name="Storyboard" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Node" type="Node" parent="Node"]
+
+[node name="Scene1" parent="Node/Node" instance=ExtResource("1_x5464")]
