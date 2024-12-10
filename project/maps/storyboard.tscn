@@ -5,10 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://cprhoc8jtenqf" path="res://maps/scenes/loop1/loop1_sceen2_explosion.tscn" id="2_7g0m8"]
 [ext_resource type="PackedScene" uid="uid://xk5j2ohb8v4f" path="res://maps/scenes/loop1/loop1_sceen3_landscape.tscn" id="3_47ac5"]
 [ext_resource type="PackedScene" uid="uid://bysxf23bjs3yr" path="res://maps/scenes/loop1/loop1_sceen4_character.tscn" id="4_635hy"]
-[ext_resource type="PackedScene" uid="uid://cnapwl7jhpjp" path="res://maps/scenes/loop1/loop1_sceen5_character.tscn" id="5_5k7du"]
+[ext_resource type="PackedScene" uid="uid://cnapwl7jhpjp" path="res://maps/scenes/loop1/loop1_sceen5_button.tscn" id="5_5k7du"]
 
-[node name="Storyboard" type="Node2D"]
+[node name="Storyboard" type="Node2D" node_paths=PackedStringArray("scene_players")]
 script = ExtResource("1_vkcqr")
+scene_players = [NodePath("Node/Loop1/Pocketwatch"), NodePath("Node/Loop1/Explosion"), NodePath("Node/Loop1/Landscape"), NodePath("Node/Loop1/Character"), NodePath("Node/Loop1/Button")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
