@@ -1,11 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkrmm0i7y20xa"]
+[gd_scene load_steps=7 format=3 uid="uid://bkrmm0i7y20xa"]
 
+[ext_resource type="Script" path="res://maps/scripts/storyboard.gd" id="1_vkcqr"]
 [ext_resource type="PackedScene" uid="uid://yiuni3wf04ak" path="res://maps/scenes/loop1/loop1_sceen1_pocketwatch.tscn" id="1_x5464"]
+[ext_resource type="PackedScene" uid="uid://cprhoc8jtenqf" path="res://maps/scenes/loop1/loop1_sceen2_explosion.tscn" id="2_7g0m8"]
+[ext_resource type="PackedScene" uid="uid://xk5j2ohb8v4f" path="res://maps/scenes/loop1/loop1_sceen3_landscape.tscn" id="3_47ac5"]
+[ext_resource type="PackedScene" uid="uid://bysxf23bjs3yr" path="res://maps/scenes/loop1/loop1_sceen4_character.tscn" id="4_635hy"]
+[ext_resource type="PackedScene" uid="uid://cnapwl7jhpjp" path="res://maps/scenes/loop1/loop1_sceen5_character.tscn" id="5_5k7du"]
 
 [node name="Storyboard" type="Node2D"]
+script = ExtResource("1_vkcqr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Node" type="Node" parent="."]
 
 [node name="Node" type="Node" parent="Node"]
 
-[node name="Scene1" parent="Node/Node" instance=ExtResource("1_x5464")]
+[node name="Loop1" type="Node2D" parent="Node"]
+
+[node name="Pocketwatch" parent="Node/Loop1" instance=ExtResource("1_x5464")]
+
+[node name="Explosion" parent="Node/Loop1" instance=ExtResource("2_7g0m8")]
+position = Vector2(750, 0)
+
+[node name="Landscape" parent="Node/Loop1" instance=ExtResource("3_47ac5")]
+position = Vector2(1500, 0)
+
+[node name="Character" parent="Node/Loop1" instance=ExtResource("4_635hy")]
+position = Vector2(2250, 0)
+
+[node name="Button" parent="Node/Loop1" instance=ExtResource("5_5k7du")]
+position = Vector2(3000, 0)
