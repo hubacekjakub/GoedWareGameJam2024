@@ -26,8 +26,6 @@ turbulence_enabled = true
 turbulence_noise_scale = 2.0
 
 [node name="FireParticle" type="Node2D"]
-position = Vector2(203, 110)
-scale = Vector2(3, 3)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 amount = 50
