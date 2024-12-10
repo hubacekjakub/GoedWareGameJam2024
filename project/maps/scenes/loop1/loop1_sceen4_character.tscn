@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://bysxf23bjs3yr"]
+
+[ext_resource type="Script" path="res://scripts/scene.gd" id="1_tss07"]
+[ext_resource type="Texture2D" uid="uid://dphf5ej5vreak" path="res://assets/character/head-head-BACKGROUND4.png" id="2_1n30e"]
+[ext_resource type="Texture2D" uid="uid://3tbten470711" path="res://assets/character/head-torso4.png" id="3_j4j83"]
+[ext_resource type="Texture2D" uid="uid://drdaxbq1qkufo" path="res://assets/character/head-head-full4.png" id="4_nmr0m"]
+
+[sub_resource type="Animation" id="Animation_kyree"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_wpxgh"]
+resource_name = "story"
+length = 4.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
+_data = {
+"RESET": SubResource("Animation_kyree"),
+"story": SubResource("Animation_wpxgh")
+}
+
+[node name="Scene" type="Node2D"]
+script = ExtResource("1_tss07")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3ybw6")
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Head-head-background4" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("2_1n30e")
+centered = false
+
+[node name="Head-torso4" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("3_j4j83")
+centered = false
+
+[node name="Head-head-full4" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("4_nmr0m")
+centered = false
