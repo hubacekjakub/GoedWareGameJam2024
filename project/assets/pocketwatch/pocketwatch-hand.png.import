@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnvpv283gywkn"
-path="res://.godot/imported/pocketwatch.png-9e3b836e13ccc2e0fac2b5ef5f528ba5.ctex"
+uid="uid://cgto1qc7uycp2"
+path="res://.godot/imported/pocketwatch-hand.png-d726679538ef5c5958ca89e0a13a53ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pocketwatch.png"
-dest_files=["res://.godot/imported/pocketwatch.png-9e3b836e13ccc2e0fac2b5ef5f528ba5.ctex"]
+source_file="res://assets/pocketwatch/pocketwatch-hand.png"
+dest_files=["res://.godot/imported/pocketwatch-hand.png-d726679538ef5c5958ca89e0a13a53ae.ctex"]
 
 [params]
 
