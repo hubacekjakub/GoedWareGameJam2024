@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://brs2yw72wowpp"]
+[gd_scene load_steps=12 format=3 uid="uid://brs2yw72wowpp"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_xpli4"]
 [ext_resource type="Texture2D" uid="uid://dphf5ej5vreak" path="res://assets/character/head-head-BACKGROUND4.png" id="2_3xn5e"]
 [ext_resource type="Texture2D" uid="uid://p0xp1y2d786" path="res://assets/landscape/intro-1-foreground-4.png" id="2_h6hsx"]
-[ext_resource type="Texture2D" uid="uid://c2oxmqf086ece" path="res://assets/landscape/sky-blue.png" id="2_ou030"]
 [ext_resource type="Texture2D" uid="uid://bxqspec4jobyl" path="res://assets/landscape/intro-1-foreground-8.png" id="3_rt7jg"]
 [ext_resource type="Texture2D" uid="uid://b2sx3v7wdd470" path="res://assets/landscape/intro-1-foreground-6.png" id="4_ljb0i"]
 [ext_resource type="Texture2D" uid="uid://bod0mb60ajq6w" path="res://assets/landscape/intro-1-foreground2.png" id="5_p10uw"]
@@ -35,10 +34,6 @@ libraries = {
 
 [node name="Head-head-background4" type="Sprite2D" parent="Node2D"]
 texture = ExtResource("2_3xn5e")
-centered = false
-
-[node name="Sky-blue" type="Sprite2D" parent="Node2D"]
-texture = ExtResource("2_ou030")
 centered = false
 
 [node name="Intro-1-foreground-5" type="Sprite2D" parent="Node2D"]
