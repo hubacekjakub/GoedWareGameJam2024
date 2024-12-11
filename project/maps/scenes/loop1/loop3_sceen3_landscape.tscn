@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://4dbbbbh5dgq8" path="res://assets/landscape/intro-1-foreground-2.png" id="6_elviu"]
 [ext_resource type="Shader" path="res://shaders/tv_screen.gdshader" id="8_00d6n"]
 [ext_resource type="PackedScene" uid="uid://brjfldw8xqh1o" path="res://scenes/fire_particle.tscn" id="9_pklff"]
-[ext_resource type="AudioStream" uid="uid://tmj78of1i5rf" path="res://assets/sounds/SAMPLIFIRE_fx_ambiance_crowd_screams.wav" id="9_rca6n"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
@@ -115,7 +114,6 @@ offset_bottom = 311.0
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Head-head-background4" type="Sprite2D" parent="Node2D"]
-visible = false
 texture = ExtResource("2_3xn5e")
 centered = false
 
@@ -150,3 +148,5 @@ position = Vector2(153, 195)
 material = SubResource("ShaderMaterial_tncwb")
 offset_right = 638.0
 offset_bottom = 370.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]

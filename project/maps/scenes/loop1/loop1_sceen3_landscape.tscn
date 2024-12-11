@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://xk5j2ohb8v4f"]
+[gd_scene load_steps=22 format=3 uid="uid://xk5j2ohb8v4f"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_4dxb5"]
 [ext_resource type="Texture2D" uid="uid://p0xp1y2d786" path="res://assets/landscape/intro-1-foreground-4.png" id="2_u1wo5"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b2sx3v7wdd470" path="res://assets/landscape/intro-1-foreground-6.png" id="4_hiqii"]
 [ext_resource type="Texture2D" uid="uid://bod0mb60ajq6w" path="res://assets/landscape/intro-1-foreground2.png" id="5_p8xhw"]
 [ext_resource type="Texture2D" uid="uid://4dbbbbh5dgq8" path="res://assets/landscape/intro-1-foreground-2.png" id="6_nvvy8"]
+[ext_resource type="Texture2D" uid="uid://1mhuowjysqd3" path="res://assets/landscape/ahhhhh-ruuuun.png" id="8_0cmy3"]
 [ext_resource type="AudioStream" uid="uid://xnbywmovte5y" path="res://assets/sounds/Kit_05_Siren.wav" id="8_q25sb"]
 [ext_resource type="Shader" path="res://shaders/tv_screen.gdshader" id="8_sa2cc"]
 [ext_resource type="Texture2D" uid="uid://c4jhb5ex6bty7" path="res://assets/landscape/cover-for-apocalypse2-export.png" id="8_y2uxm"]
@@ -24,6 +25,54 @@ tracks/0/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/AnimatedSprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(241, 234)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/AnimatedSprite2D3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(280, 226)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/AnimatedSprite2D2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(311, 234)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/AnimatedSprite2D4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(170, 319)]
+}
 
 [sub_resource type="Animation" id="Animation_wpxgh"]
 resource_name = "story"
@@ -35,10 +84,114 @@ tracks/0/path = NodePath("AudioStreamPlayer:playing")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/AnimatedSprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.46667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(241, 234), Vector2(362, 232)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/AnimatedSprite2D3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.46667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(280, 226), Vector2(424, 226)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/AnimatedSprite2D2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.46667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(311, 234), Vector2(439, 235)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/AnimatedSprite2D4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.46667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(170, 319), Vector2(546, 311)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/AnimatedSprite2D")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"values": [{
+"args": [&"default", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/AnimatedSprite2D3")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"default", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2D/AnimatedSprite2D4")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"default", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2D/AnimatedSprite2D2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"default", 1.0, false],
+"method": &"play"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
@@ -46,6 +199,56 @@ _data = {
 "RESET": SubResource("Animation_kyree"),
 "story": SubResource("Animation_wpxgh")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf6i8"]
+atlas = ExtResource("8_0cmy3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4ydu"]
+atlas = ExtResource("8_0cmy3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e3bf"]
+atlas = ExtResource("8_0cmy3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lk7r0"]
+atlas = ExtResource("8_0cmy3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1pee"]
+atlas = ExtResource("8_0cmy3")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8u5h"]
+atlas = ExtResource("8_0cmy3")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6ror"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bf6i8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4ydu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e3bf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lk7r0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1pee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8u5h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hqrrs"]
 shader = ExtResource("8_sa2cc")
@@ -110,6 +313,27 @@ centered = false
 [node name="Cover-for-apocalypse2-export" type="Sprite2D" parent="Node2D"]
 texture = ExtResource("8_y2uxm")
 centered = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(241, 234)
+sprite_frames = SubResource("SpriteFrames_y6ror")
+frame_progress = 0.666636
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(311, 234)
+sprite_frames = SubResource("SpriteFrames_y6ror")
+frame_progress = 0.237511
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(280, 226)
+sprite_frames = SubResource("SpriteFrames_y6ror")
+frame_progress = 0.216639
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(170, 319)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_y6ror")
+frame_progress = 0.580417
 
 [node name="ColorRect" type="ColorRect" parent="Node2D"]
 material = SubResource("ShaderMaterial_hqrrs")
