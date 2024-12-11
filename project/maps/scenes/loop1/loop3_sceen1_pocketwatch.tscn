@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://yiuni3wf04ak"]
+[gd_scene load_steps=8 format=3 uid="uid://cqr5r1v86moko"]
 
-[ext_resource type="Script" path="res://scripts/scene.gd" id="1_ph80l"]
-[ext_resource type="Texture2D" uid="uid://dnvpv283gywkn" path="res://assets/pocketwatch/pocketwatch.png" id="3_tgfnf"]
-[ext_resource type="Texture2D" uid="uid://br34ted7tcslv" path="res://assets/pocketwatch/pocketwatch-hand-cut.png" id="4_ngvw3"]
+[ext_resource type="Script" path="res://scripts/scene.gd" id="1_c4xj4"]
+[ext_resource type="Texture2D" uid="uid://dnvpv283gywkn" path="res://assets/pocketwatch/pocketwatch.png" id="2_uy0ip"]
+[ext_resource type="Texture2D" uid="uid://br34ted7tcslv" path="res://assets/pocketwatch/pocketwatch-hand-cut.png" id="3_fapfc"]
+[ext_resource type="Texture2D" uid="uid://88ndu1dygh70" path="res://assets/pocketwatch/cracks_for_watch1.png" id="4_lm63b"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
@@ -21,7 +22,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_wpxgh"]
 resource_name = "story"
-length = 4.6
+length = 3.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -29,7 +30,7 @@ tracks/0/path = NodePath("Node2D/Pocketwatch-hand-cut:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8, 0.9, 1.7, 1.8, 2.6, 2.7, 3.5, 3.6, 4.4, 4.5),
+"times": PackedFloat32Array(0, 0.5, 0.6, 1.1, 1.2, 1.7, 1.8, 2.3, 2.4, 2.9, 3),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 0.0, 0.0698132, 0.0698132, 0.139626, 0.139626, 0.20944, 0.20944, 0.279253, 0.279253, 0.349066]
@@ -42,7 +43,7 @@ _data = {
 }
 
 [node name="Scene1" type="Node2D"]
-script = ExtResource("1_ph80l")
+script = ExtResource("1_c4xj4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -52,11 +53,15 @@ libraries = {
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Pocketwatch" type="Sprite2D" parent="Node2D"]
-texture = ExtResource("3_tgfnf")
+texture = ExtResource("2_uy0ip")
 centered = false
 
 [node name="Pocketwatch-hand-cut" type="Sprite2D" parent="Node2D"]
 position = Vector2(415, 197)
-texture = ExtResource("4_ngvw3")
+texture = ExtResource("3_fapfc")
 centered = false
 offset = Vector2(-4, -28)
+
+[node name="CracksForWatch1" type="Sprite2D" parent="."]
+texture = ExtResource("4_lm63b")
+centered = false

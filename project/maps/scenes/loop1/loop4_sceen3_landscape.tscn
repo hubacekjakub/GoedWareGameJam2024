@@ -1,0 +1,79 @@
+[gd_scene load_steps=13 format=3 uid="uid://cj0tt8d76jq5p"]
+
+[ext_resource type="Script" path="res://scripts/scene.gd" id="1_yhmbe"]
+[ext_resource type="Texture2D" uid="uid://c3q7v4le8boqb" path="res://assets/landscape/sky-green.png" id="2_f1i10"]
+[ext_resource type="Texture2D" uid="uid://p0xp1y2d786" path="res://assets/landscape/intro-1-foreground-4.png" id="2_gnjku"]
+[ext_resource type="Texture2D" uid="uid://bxqspec4jobyl" path="res://assets/landscape/intro-1-foreground-8.png" id="3_es2y8"]
+[ext_resource type="Texture2D" uid="uid://b2sx3v7wdd470" path="res://assets/landscape/intro-1-foreground-6.png" id="4_sbuj2"]
+[ext_resource type="Texture2D" uid="uid://bod0mb60ajq6w" path="res://assets/landscape/intro-1-foreground2.png" id="5_lhjke"]
+[ext_resource type="Texture2D" uid="uid://4dbbbbh5dgq8" path="res://assets/landscape/intro-1-foreground-2.png" id="6_jr0q6"]
+[ext_resource type="Texture2D" uid="uid://c4jhb5ex6bty7" path="res://assets/landscape/cover-for-apocalypse2-export.png" id="8_hxxu7"]
+[ext_resource type="Texture2D" uid="uid://cvufvu25xsa7x" path="res://assets/landscape/attackers-apocalyptic-scene.png" id="9_sx7eu"]
+
+[sub_resource type="Animation" id="Animation_kyree"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_wpxgh"]
+resource_name = "story"
+length = 2.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
+_data = {
+"RESET": SubResource("Animation_kyree"),
+"story": SubResource("Animation_wpxgh")
+}
+
+[node name="Scene2" type="Node2D"]
+script = ExtResource("1_yhmbe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3ybw6")
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sky-green" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("2_f1i10")
+centered = false
+
+[node name="Intro-1-foreground-4" type="Sprite2D" parent="Node2D"]
+visible = false
+texture = ExtResource("2_gnjku")
+centered = false
+
+[node name="Intro-1-foreground-8" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("3_es2y8")
+centered = false
+
+[node name="Intro-1-foreground-6" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("4_sbuj2")
+centered = false
+
+[node name="Intro-1-foreground2" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("5_lhjke")
+centered = false
+
+[node name="Intro-1-foreground-2" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("6_jr0q6")
+centered = false
+
+[node name="Cover-for-apocalypse2-export" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("8_hxxu7")
+centered = false
+
+[node name="Attackers-apocalyptic-scene" type="Sprite2D" parent="Node2D"]
+position = Vector2(268, 112)
+rotation = 0.00389835
+scale = Vector2(2.98349, 3.28563)
+texture = ExtResource("9_sx7eu")
+
+[node name="Attackers-apocalyptic-scene2" type="Sprite2D" parent="Node2D"]
+position = Vector2(123, 41)
+texture = ExtResource("9_sx7eu")
+
+[node name="Attackers-apocalyptic-scene3" type="Sprite2D" parent="Node2D"]
+position = Vector2(556, 69)
+rotation = 0.00389835
+scale = Vector2(2, 2)
+texture = ExtResource("9_sx7eu")

@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://tivan5pptt1l"]
+
+[ext_resource type="Script" path="res://scripts/scene.gd" id="1_y14bj"]
+
+[sub_resource type="Animation" id="Animation_kyree"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_wpxgh"]
+resource_name = "story"
+length = 1.5
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
+_data = {
+"RESET": SubResource("Animation_kyree"),
+"story": SubResource("Animation_wpxgh")
+}
+
+[node name="Scene2" type="Node2D"]
+script = ExtResource("1_y14bj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3ybw6")
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+offset_right = 652.0
+offset_bottom = 369.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.5
+offset_top = -49.5
+offset_right = 127.5
+offset_bottom = 49.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 72
+text = "AGAIN!"
+fit_content = true

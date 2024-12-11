@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://xk5j2ohb8v4f"]
+[gd_scene load_steps=11 format=3 uid="uid://xk5j2ohb8v4f"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_4dxb5"]
 [ext_resource type="Texture2D" uid="uid://p0xp1y2d786" path="res://assets/landscape/intro-1-foreground-4.png" id="2_u1wo5"]
@@ -6,13 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://b2sx3v7wdd470" path="res://assets/landscape/intro-1-foreground-6.png" id="4_hiqii"]
 [ext_resource type="Texture2D" uid="uid://bod0mb60ajq6w" path="res://assets/landscape/intro-1-foreground2.png" id="5_p8xhw"]
 [ext_resource type="Texture2D" uid="uid://4dbbbbh5dgq8" path="res://assets/landscape/intro-1-foreground-2.png" id="6_nvvy8"]
+[ext_resource type="Texture2D" uid="uid://c4jhb5ex6bty7" path="res://assets/landscape/cover-for-apocalypse2-export.png" id="8_y2uxm"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
 
 [sub_resource type="Animation" id="Animation_wpxgh"]
 resource_name = "story"
-length = 2.0
+length = 3.0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
 _data = {
@@ -30,7 +31,12 @@ libraries = {
 
 [node name="Node2D" type="Node2D" parent="."]
 
+[node name="Intro-1-foreground-5" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("2_u1wo5")
+centered = false
+
 [node name="Intro-1-foreground-4" type="Sprite2D" parent="Node2D"]
+visible = false
 texture = ExtResource("2_u1wo5")
 centered = false
 
@@ -47,5 +53,10 @@ texture = ExtResource("5_p8xhw")
 centered = false
 
 [node name="Intro-1-foreground-2" type="Sprite2D" parent="Node2D"]
+visible = false
 texture = ExtResource("6_nvvy8")
+centered = false
+
+[node name="Cover-for-apocalypse2-export" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("8_y2uxm")
 centered = false

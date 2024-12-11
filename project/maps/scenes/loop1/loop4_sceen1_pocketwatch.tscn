@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://yiuni3wf04ak"]
+[gd_scene load_steps=9 format=3 uid="uid://b7oipsinbs34m"]
 
-[ext_resource type="Script" path="res://scripts/scene.gd" id="1_ph80l"]
-[ext_resource type="Texture2D" uid="uid://dnvpv283gywkn" path="res://assets/pocketwatch/pocketwatch.png" id="3_tgfnf"]
-[ext_resource type="Texture2D" uid="uid://br34ted7tcslv" path="res://assets/pocketwatch/pocketwatch-hand-cut.png" id="4_ngvw3"]
+[ext_resource type="Script" path="res://scripts/scene.gd" id="1_qrd2f"]
+[ext_resource type="Texture2D" uid="uid://dnvpv283gywkn" path="res://assets/pocketwatch/pocketwatch.png" id="2_dwcey"]
+[ext_resource type="Texture2D" uid="uid://br34ted7tcslv" path="res://assets/pocketwatch/pocketwatch-hand-cut.png" id="3_4hyvn"]
+[ext_resource type="Texture2D" uid="uid://dt2sfehqd7yjp" path="res://assets/pocketwatch/bloodstains_for_watch1.png" id="4_pf3tr"]
+[ext_resource type="Texture2D" uid="uid://88ndu1dygh70" path="res://assets/pocketwatch/cracks_for_watch1.png" id="5_n1238"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
@@ -42,7 +44,7 @@ _data = {
 }
 
 [node name="Scene1" type="Node2D"]
-script = ExtResource("1_ph80l")
+script = ExtResource("1_qrd2f")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -52,11 +54,19 @@ libraries = {
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Pocketwatch" type="Sprite2D" parent="Node2D"]
-texture = ExtResource("3_tgfnf")
+texture = ExtResource("2_dwcey")
 centered = false
 
 [node name="Pocketwatch-hand-cut" type="Sprite2D" parent="Node2D"]
 position = Vector2(415, 197)
-texture = ExtResource("4_ngvw3")
+texture = ExtResource("3_4hyvn")
 centered = false
 offset = Vector2(-4, -28)
+
+[node name="BloodstainsForWatch1" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("4_pf3tr")
+centered = false
+
+[node name="CracksForWatch1" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("5_n1238")
+centered = false

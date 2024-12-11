@@ -1,17 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnapwl7jhpjp"]
+[gd_scene load_steps=9 format=3 uid="uid://b5d0slf3msi8u"]
 
-[ext_resource type="Script" path="res://scripts/scene.gd" id="1_pw8ms"]
-[ext_resource type="Texture2D" uid="uid://bl1ifi2wlo7ei" path="res://assets/Button/tablet-export.png" id="2_ej253"]
-[ext_resource type="Texture2D" uid="uid://dermibfeqltss" path="res://assets/Button/restart-button-red-export.png" id="3_0ilek"]
-[ext_resource type="Texture2D" uid="uid://bnt5w2lynu3nv" path="res://assets/Button/restart-button-green-export.png" id="4_y78vt"]
-[ext_resource type="Texture2D" uid="uid://bgxi1kyra3wed" path="res://assets/Button/restart-finger-export.png" id="5_ximbq"]
+[ext_resource type="Script" path="res://scripts/scene.gd" id="1_j46lu"]
+[ext_resource type="Texture2D" uid="uid://bl1ifi2wlo7ei" path="res://assets/Button/tablet-export.png" id="2_5voep"]
+[ext_resource type="Texture2D" uid="uid://dermibfeqltss" path="res://assets/Button/restart-button-red-export.png" id="3_lxucu"]
+[ext_resource type="Texture2D" uid="uid://bnt5w2lynu3nv" path="res://assets/Button/restart-button-green-export.png" id="4_yysel"]
+[ext_resource type="Texture2D" uid="uid://bgxi1kyra3wed" path="res://assets/Button/restart-finger-export.png" id="5_fmfoh"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
 
 [sub_resource type="Animation" id="Animation_wpxgh"]
 resource_name = "story"
-length = 2.5
+length = 2.0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
 _data = {
@@ -20,7 +20,7 @@ _data = {
 }
 
 [node name="Scene2" type="Node2D"]
-script = ExtResource("1_pw8ms")
+script = ExtResource("1_j46lu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -30,19 +30,19 @@ libraries = {
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Tablet-export" type="Sprite2D" parent="Node2D"]
-texture = ExtResource("2_ej253")
+texture = ExtResource("2_5voep")
 centered = false
 
 [node name="Restart-button-red-export" type="Sprite2D" parent="Node2D"]
-texture = ExtResource("3_0ilek")
+texture = ExtResource("3_lxucu")
 centered = false
 
 [node name="Restart-button-green-export" type="Sprite2D" parent="Node2D"]
-texture = ExtResource("4_y78vt")
+texture = ExtResource("4_yysel")
 centered = false
 
 [node name="Restart-finger-export" type="Sprite2D" parent="Node2D"]
-texture = ExtResource("5_ximbq")
+texture = ExtResource("5_fmfoh")
 centered = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D"]
@@ -55,5 +55,5 @@ bbcode_enabled = true
 text = "[center]
 HUMAN RACE
 SURVIVAL RATE:
-3%
+2%
 [/center]"

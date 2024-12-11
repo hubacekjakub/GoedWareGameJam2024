@@ -12,7 +12,7 @@ length = 0.001
 
 [sub_resource type="Animation" id="Animation_wpxgh"]
 resource_name = "story"
-length = 2.0
+length = 4.0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
 _data = {
@@ -35,18 +35,23 @@ texture = ExtResource("2_iy6ol")
 centered = false
 
 [node name="Explosion-backgound" type="Sprite2D" parent="Node2D"]
-position = Vector2(0, 120)
 texture = ExtResource("3_1y81o")
 centered = false
 
 [node name="Mushroom-1" type="Sprite2D" parent="Node2D"]
+position = Vector2(148, 89)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_oty1f")
 centered = false
 
 [node name="Mushroom-2" type="Sprite2D" parent="Node2D"]
+position = Vector2(160, 84)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_b2yoc")
 centered = false
 
 [node name="Mushroom-3" type="Sprite2D" parent="Node2D"]
+position = Vector2(151, 95)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_8lsvs")
 centered = false
