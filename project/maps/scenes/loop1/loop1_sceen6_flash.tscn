@@ -1,13 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgcggwaoskk48"]
+[gd_scene load_steps=6 format=3 uid="uid://bgcggwaoskk48"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_gppmx"]
+[ext_resource type="AudioStream" uid="uid://cpw1ftwepbcbx" path="res://assets/sounds/time-travel.wav" id="2_poi87"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_wpxgh"]
 resource_name = "story"
 length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
 _data = {
@@ -28,3 +53,7 @@ libraries = {
 [node name="ColorRect" type="ColorRect" parent="Node2D"]
 offset_right = 652.0
 offset_bottom = 369.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_poi87")
+bus = &"Effects"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cxhvkj5atbvjv"]
+[gd_scene load_steps=12 format=3 uid="uid://cxhvkj5atbvjv"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_80k33"]
 [ext_resource type="Texture2D" uid="uid://dphf5ej5vreak" path="res://assets/character/head-head-BACKGROUND4.png" id="2_h7gvc"]
@@ -7,13 +7,38 @@
 [ext_resource type="Texture2D" uid="uid://bod0mb60ajq6w" path="res://assets/landscape/intro-1-foreground2.png" id="5_yvxhr"]
 [ext_resource type="Texture2D" uid="uid://4dbbbbh5dgq8" path="res://assets/landscape/intro-1-foreground-2.png" id="6_s7mk6"]
 [ext_resource type="Texture2D" uid="uid://bgwhamqcfqpfb" path="res://assets/landscape/tent-for-apocalypse2.png" id="7_etqda"]
+[ext_resource type="AudioStream" uid="uid://dcgbj6osxm5tm" path="res://assets/sounds/thunderstorm.wav" id="8_yq82a"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_wpxgh"]
 resource_name = "story"
 length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
 _data = {
@@ -54,3 +79,7 @@ centered = false
 [node name="Tent-for-apocalypse2" type="Sprite2D" parent="Node2D"]
 texture = ExtResource("7_etqda")
 centered = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_yq82a")
+bus = &"Effects"
