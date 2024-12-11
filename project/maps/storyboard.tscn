@@ -23,11 +23,11 @@
 [ext_resource type="PackedScene" uid="uid://c5xlio1ulq8ro" path="res://maps/scenes/loop1/loop4_sceen7_button.tscn" id="21_budqq"]
 [ext_resource type="PackedScene" uid="uid://b4wixiclqllxm" path="res://maps/scenes/loop1/loop4_sceen5_knife.tscn" id="21_gqc5g"]
 [ext_resource type="PackedScene" uid="uid://c885j0l4fb7jh" path="res://maps/scenes/loop1/loop4_sceen6_death.tscn" id="22_gyl2b"]
-[ext_resource type="AudioStream" uid="uid://i2s6e7pjpcnr" path="res://assets/sounds/cutscene-draft.mp3" id="24_if4m5"]
+[ext_resource type="PackedScene" uid="uid://cjawkp4dphmp1" path="res://maps/scenes/loop1/loop4_sceen8_countdown.tscn" id="24_0nvds"]
 
 [node name="Storyboard" type="Node2D" node_paths=PackedStringArray("scene_players")]
 script = ExtResource("1_vkcqr")
-scene_players = [NodePath("Node/Loop1/Again"), NodePath("Node/Loop1/Pocketwatch"), NodePath("Node/Loop1/Explosion"), NodePath("Node/Loop1/Landscape"), NodePath("Node/Loop1/Character"), NodePath("Node/Loop1/Button"), NodePath("Node/Loop1/Flash"), NodePath("Node/Loop2/Again2"), NodePath("Node/Loop2/Pocketwatch2"), NodePath("Node/Loop2/Landscape2"), NodePath("Node/Loop2/Character2"), NodePath("Node/Loop2/Button2"), NodePath("Node/Loop2/Flash2"), NodePath("Node/Loop3/Again3"), NodePath("Node/Loop3/Pocketwatch3"), NodePath("Node/Loop3/Landscape3"), NodePath("Node/Loop3/Character3"), NodePath("Node/Loop3/Button3"), NodePath("Node/Loop3/Flash3"), NodePath("Node/Loop4/Again4"), NodePath("Node/Loop4/Pocketwatch4"), NodePath("Node/Loop4/Landscape4"), NodePath("Node/Loop4/Character4"), NodePath("Node/Loop4/Knife4"), NodePath("Node/Loop4/Death4"), NodePath("Node/Loop4/Button4")]
+scene_players = [NodePath("Node/Loop1/Again"), NodePath("Node/Loop1/Pocketwatch"), NodePath("Node/Loop1/Explosion"), NodePath("Node/Loop1/Landscape"), NodePath("Node/Loop1/Character"), NodePath("Node/Loop1/Button"), NodePath("Node/Loop1/Flash"), NodePath("Node/Loop2/Again2"), NodePath("Node/Loop2/Pocketwatch2"), NodePath("Node/Loop2/Landscape2"), NodePath("Node/Loop2/Character2"), NodePath("Node/Loop2/Button2"), NodePath("Node/Loop2/Flash2"), NodePath("Node/Loop3/Again3"), NodePath("Node/Loop3/Pocketwatch3"), NodePath("Node/Loop3/Landscape3"), NodePath("Node/Loop3/Character3"), NodePath("Node/Loop3/Button3"), NodePath("Node/Loop3/Flash3"), NodePath("Node/Loop4/Again4"), NodePath("Node/Loop4/Pocketwatch4"), NodePath("Node/Loop4/Landscape4"), NodePath("Node/Loop4/Character4"), NodePath("Node/Loop4/Knife4"), NodePath("Node/Loop4/Death4"), NodePath("Node/Loop4/Button4"), NodePath("Node/Loop4/Countdown4")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -124,6 +124,5 @@ position = Vector2(4596, 1613)
 [node name="Button4" parent="Node/Loop4" instance=ExtResource("21_budqq")]
 position = Vector2(5361, 1609)
 
-[node name="MainAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("24_if4m5")
-autoplay = true
+[node name="Countdown4" parent="Node/Loop4" instance=ExtResource("24_0nvds")]
+position = Vector2(6075, 1607)
