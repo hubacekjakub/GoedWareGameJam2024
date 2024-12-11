@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cxhvkj5atbvjv"]
+[gd_scene load_steps=14 format=3 uid="uid://cxhvkj5atbvjv"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_80k33"]
 [ext_resource type="Texture2D" uid="uid://c2oxmqf086ece" path="res://assets/landscape/sky-blue.png" id="2_fy3dw"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bod0mb60ajq6w" path="res://assets/landscape/intro-1-foreground2.png" id="5_yvxhr"]
 [ext_resource type="Texture2D" uid="uid://4dbbbbh5dgq8" path="res://assets/landscape/intro-1-foreground-2.png" id="6_s7mk6"]
 [ext_resource type="Texture2D" uid="uid://bgwhamqcfqpfb" path="res://assets/landscape/tent-for-apocalypse2.png" id="7_etqda"]
+[ext_resource type="Shader" path="res://shaders/tv_screen.gdshader" id="8_q52f3"]
 [ext_resource type="AudioStream" uid="uid://dcgbj6osxm5tm" path="res://assets/sounds/thunderstorm.wav" id="8_yq82a"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
@@ -46,6 +47,30 @@ _data = {
 "story": SubResource("Animation_wpxgh")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_npk85"]
+shader = ExtResource("8_q52f3")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.005
+shader_parameter/scanlines_width = 0.1
+shader_parameter/grille_opacity = 0.0
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 5.0
+shader_parameter/roll_size = 20.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.14
+shader_parameter/aberration = 4.75e-08
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.59
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
 [node name="Scene2" type="Node2D"]
 script = ExtResource("1_80k33")
 
@@ -79,6 +104,11 @@ centered = false
 [node name="Tent-for-apocalypse2" type="Sprite2D" parent="Node2D"]
 texture = ExtResource("7_etqda")
 centered = false
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+material = SubResource("ShaderMaterial_npk85")
+offset_right = 638.0
+offset_bottom = 370.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_yq82a")

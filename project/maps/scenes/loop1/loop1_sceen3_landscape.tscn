@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://xk5j2ohb8v4f"]
+[gd_scene load_steps=14 format=3 uid="uid://xk5j2ohb8v4f"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_4dxb5"]
 [ext_resource type="Texture2D" uid="uid://p0xp1y2d786" path="res://assets/landscape/intro-1-foreground-4.png" id="2_u1wo5"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bod0mb60ajq6w" path="res://assets/landscape/intro-1-foreground2.png" id="5_p8xhw"]
 [ext_resource type="Texture2D" uid="uid://4dbbbbh5dgq8" path="res://assets/landscape/intro-1-foreground-2.png" id="6_nvvy8"]
 [ext_resource type="AudioStream" uid="uid://xnbywmovte5y" path="res://assets/sounds/Kit_05_Siren.wav" id="8_q25sb"]
+[ext_resource type="Shader" path="res://shaders/tv_screen.gdshader" id="8_sa2cc"]
 [ext_resource type="Texture2D" uid="uid://c4jhb5ex6bty7" path="res://assets/landscape/cover-for-apocalypse2-export.png" id="8_y2uxm"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
@@ -45,6 +46,30 @@ _data = {
 "RESET": SubResource("Animation_kyree"),
 "story": SubResource("Animation_wpxgh")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hqrrs"]
+shader = ExtResource("8_sa2cc")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.005
+shader_parameter/scanlines_width = 0.1
+shader_parameter/grille_opacity = 0.0
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 5.0
+shader_parameter/roll_size = 20.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.14
+shader_parameter/aberration = 4.75e-08
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.59
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
 
 [node name="Scene2" type="Node2D"]
 script = ExtResource("1_4dxb5")
@@ -85,6 +110,11 @@ centered = false
 [node name="Cover-for-apocalypse2-export" type="Sprite2D" parent="Node2D"]
 texture = ExtResource("8_y2uxm")
 centered = false
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+material = SubResource("ShaderMaterial_hqrrs")
+offset_right = 638.0
+offset_bottom = 370.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_q25sb")
