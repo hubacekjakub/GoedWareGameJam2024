@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bkrmm0i7y20xa"]
+[gd_scene load_steps=26 format=3 uid="uid://bkrmm0i7y20xa"]
 
 [ext_resource type="Script" path="res://maps/scripts/storyboard.gd" id="1_vkcqr"]
 [ext_resource type="PackedScene" uid="uid://yiuni3wf04ak" path="res://maps/scenes/loop1/loop1_sceen1_pocketwatch.tscn" id="1_x5464"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://b4wixiclqllxm" path="res://maps/scenes/loop1/loop4_sceen5_knife.tscn" id="21_gqc5g"]
 [ext_resource type="PackedScene" uid="uid://c885j0l4fb7jh" path="res://maps/scenes/loop1/loop4_sceen6_death.tscn" id="22_gyl2b"]
 [ext_resource type="PackedScene" uid="uid://cjawkp4dphmp1" path="res://maps/scenes/loop1/loop4_sceen8_countdown.tscn" id="24_0nvds"]
+[ext_resource type="AudioStream" uid="uid://bpvflie8s222n" path="res://assets/sounds/cutscene-short.mp3" id="25_wc7v8"]
 
 [node name="Storyboard" type="Node2D" node_paths=PackedStringArray("scene_players")]
 script = ExtResource("1_vkcqr")
@@ -126,3 +127,7 @@ position = Vector2(5361, 1609)
 
 [node name="Countdown4" parent="Node/Loop4" instance=ExtResource("24_0nvds")]
 position = Vector2(6075, 1607)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_wc7v8")
+autoplay = true

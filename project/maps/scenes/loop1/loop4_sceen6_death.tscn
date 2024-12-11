@@ -78,7 +78,7 @@ texture = ExtResource("3_mapit")
 sources/0 = SubResource("TileSetAtlasSource_b6l2l")
 sources/1 = SubResource("TileSetAtlasSource_chrcl")
 
-[node name="Scene2" type="Node2D"]
+[node name="Scene3" type="Node2D"]
 script = ExtResource("1_hoii5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
