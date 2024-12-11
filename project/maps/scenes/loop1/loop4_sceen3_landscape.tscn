@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cj0tt8d76jq5p"]
+[gd_scene load_steps=14 format=3 uid="uid://cj0tt8d76jq5p"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_yhmbe"]
 [ext_resource type="Texture2D" uid="uid://c3q7v4le8boqb" path="res://assets/landscape/sky-green.png" id="2_f1i10"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://4dbbbbh5dgq8" path="res://assets/landscape/intro-1-foreground-2.png" id="6_jr0q6"]
 [ext_resource type="Texture2D" uid="uid://c4jhb5ex6bty7" path="res://assets/landscape/cover-for-apocalypse2-export.png" id="8_hxxu7"]
 [ext_resource type="Texture2D" uid="uid://cvufvu25xsa7x" path="res://assets/landscape/attackers-apocalyptic-scene.png" id="9_sx7eu"]
+[ext_resource type="AudioStream" uid="uid://cirh6vblmyd2s" path="res://assets/sounds/drones-flying.wav" id="10_6j55f"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
@@ -77,3 +78,8 @@ position = Vector2(556, 69)
 rotation = 0.00389835
 scale = Vector2(2, 2)
 texture = ExtResource("9_sx7eu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_6j55f")
+autoplay = true
+bus = &"Effects"

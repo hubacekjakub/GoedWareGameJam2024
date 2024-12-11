@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cprhoc8jtenqf"]
+[gd_scene load_steps=11 format=3 uid="uid://cprhoc8jtenqf"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_5ln5c"]
 [ext_resource type="Texture2D" uid="uid://b3422e4fprp7t" path="res://assets/explosion/explosion-backgound-sky.png" id="2_iy6ol"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://to4vfca4p1ww" path="res://assets/explosion/mushroom-1.png" id="4_oty1f"]
 [ext_resource type="Texture2D" uid="uid://3bu0x1v2ey5k" path="res://assets/explosion/mushroom-2.png" id="5_b2yoc"]
 [ext_resource type="Texture2D" uid="uid://byg7upar5bcdv" path="res://assets/explosion/mushroom-3.png" id="6_8lsvs"]
+[ext_resource type="AudioStream" uid="uid://bbla6m6wh71g3" path="res://assets/sounds/boom.wav" id="7_4hb6y"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
@@ -55,3 +56,8 @@ position = Vector2(151, 95)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_8lsvs")
 centered = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_4hb6y")
+autoplay = true
+bus = &"Effects"

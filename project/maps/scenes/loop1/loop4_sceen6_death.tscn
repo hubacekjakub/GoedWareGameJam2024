@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://c885j0l4fb7jh"]
+[gd_scene load_steps=12 format=3 uid="uid://c885j0l4fb7jh"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_hoii5"]
 [ext_resource type="Texture2D" uid="uid://hqtjxqw5a1c1" path="res://assets/character/MC-death-animation-PleaseSCALEUP.png" id="3_4tje8"]
 [ext_resource type="Texture2D" uid="uid://bti7ogmc5iyjb" path="res://assets/character/bg-tile-for-deathscene2.png" id="3_mapit"]
 [ext_resource type="Texture2D" uid="uid://ce6lxnq1jl25o" path="res://assets/character/ground-deathscene.png" id="4_l7sk3"]
+[ext_resource type="AudioStream" uid="uid://b7vj20ccidkj" path="res://assets/sounds/bodyfall1.wav" id="5_qljsm"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
@@ -34,6 +35,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.03333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
@@ -93,3 +106,7 @@ position = Vector2(213, 249)
 scale = Vector2(5, 5)
 texture = ExtResource("3_4tje8")
 hframes = 7
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_qljsm")
+bus = &"Effects"

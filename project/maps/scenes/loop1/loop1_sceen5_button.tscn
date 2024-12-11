@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnapwl7jhpjp"]
+[gd_scene load_steps=10 format=3 uid="uid://cnapwl7jhpjp"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_pw8ms"]
 [ext_resource type="Texture2D" uid="uid://bl1ifi2wlo7ei" path="res://assets/Button/tablet-export.png" id="2_ej253"]
 [ext_resource type="Texture2D" uid="uid://dermibfeqltss" path="res://assets/Button/restart-button-red-export.png" id="3_0ilek"]
 [ext_resource type="Texture2D" uid="uid://bnt5w2lynu3nv" path="res://assets/Button/restart-button-green-export.png" id="4_y78vt"]
 [ext_resource type="Texture2D" uid="uid://bgxi1kyra3wed" path="res://assets/Button/restart-finger-export.png" id="5_ximbq"]
+[ext_resource type="AudioStream" uid="uid://baxmgpfthmrrj" path="res://assets/sounds/confirm-button.wav" id="6_m7p13"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
@@ -57,3 +58,8 @@ HUMAN RACE
 SURVIVAL RATE:
 3%
 [/center]"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_m7p13")
+autoplay = true
+bus = &"Effects"
