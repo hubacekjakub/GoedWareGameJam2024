@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfkwau7iahplq"
-path="res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"
+uid="uid://88ndu1dygh70"
+path="res://.godot/imported/cracks_for_watch1.png-3ca915909efe126d84c8285204bfda42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/head-torso4.png"
-dest_files=["res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"]
+source_file="res://assets/pocketwatch/cracks_for_watch1.png"
+dest_files=["res://.godot/imported/cracks_for_watch1.png-3ca915909efe126d84c8285204bfda42.ctex"]
 
 [params]
 

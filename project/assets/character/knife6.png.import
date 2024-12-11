@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfkwau7iahplq"
-path="res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"
+uid="uid://j1a8mivy2sxb"
+path="res://.godot/imported/knife6.png-805740b3897890e61cec9f1f9d4aef7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/head-torso4.png"
-dest_files=["res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"]
+source_file="res://assets/character/knife6.png"
+dest_files=["res://.godot/imported/knife6.png-805740b3897890e61cec9f1f9d4aef7f.ctex"]
 
 [params]
 

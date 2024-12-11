@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfkwau7iahplq"
-path="res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"
+uid="uid://dt2sfehqd7yjp"
+path="res://.godot/imported/bloodstains_for_watch1.png-fe5a0c658fcb3bf4bbdc301517f5d8c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/head-torso4.png"
-dest_files=["res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"]
+source_file="res://assets/pocketwatch/bloodstains_for_watch1.png"
+dest_files=["res://.godot/imported/bloodstains_for_watch1.png-fe5a0c658fcb3bf4bbdc301517f5d8c8.ctex"]
 
 [params]
 

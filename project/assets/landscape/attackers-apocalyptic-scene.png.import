@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfkwau7iahplq"
-path="res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"
+uid="uid://cvufvu25xsa7x"
+path="res://.godot/imported/attackers-apocalyptic-scene.png-9915bbdd1fc5f76dc58ff466de7f0ce5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/head-torso4.png"
-dest_files=["res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"]
+source_file="res://assets/landscape/attackers-apocalyptic-scene.png"
+dest_files=["res://.godot/imported/attackers-apocalyptic-scene.png-9915bbdd1fc5f76dc58ff466de7f0ce5.ctex"]
 
 [params]
 

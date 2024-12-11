@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfkwau7iahplq"
-path="res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"
+uid="uid://m4qxaji8uxxt"
+path="res://.godot/imported/crazyface5.png-7be7ddbb607572022610d6331940d9d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/head-torso4.png"
-dest_files=["res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"]
+source_file="res://assets/character/crazyface5.png"
+dest_files=["res://.godot/imported/crazyface5.png-7be7ddbb607572022610d6331940d9d3.ctex"]
 
 [params]
 

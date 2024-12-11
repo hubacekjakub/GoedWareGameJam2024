@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfkwau7iahplq"
-path="res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"
+uid="uid://bgwhamqcfqpfb"
+path="res://.godot/imported/tent-for-apocalypse2.png-ebde9e125bcc50e6b524f19cb9395dde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/head-torso4.png"
-dest_files=["res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"]
+source_file="res://assets/landscape/tent-for-apocalypse2.png"
+dest_files=["res://.godot/imported/tent-for-apocalypse2.png-ebde9e125bcc50e6b524f19cb9395dde.ctex"]
 
 [params]
 

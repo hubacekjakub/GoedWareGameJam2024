@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfkwau7iahplq"
-path="res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"
+uid="uid://c4jhb5ex6bty7"
+path="res://.godot/imported/cover-for-apocalypse2-export.png-7a0cc55b277cd9b1d64700581e39bac5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/head-torso4.png"
-dest_files=["res://.godot/imported/head-torso4.png-cc64ed737f302ddf60781ac4b42155c7.ctex"]
+source_file="res://assets/landscape/cover-for-apocalypse2-export.png"
+dest_files=["res://.godot/imported/cover-for-apocalypse2-export.png-7a0cc55b277cd9b1d64700581e39bac5.ctex"]
 
 [params]
 
