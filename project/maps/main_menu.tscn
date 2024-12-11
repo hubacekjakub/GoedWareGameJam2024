@@ -72,6 +72,17 @@ size_flags_horizontal = 3
 [node name="RightVBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/RightVBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Programmers:
+Jakub Hubáček
+Jan Mesarč
+
+Art and Music:
+Meru"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/LeftVBoxContainer/MainMenuVBox/StartButton" to="." method="_on_start_button_pressed"]
