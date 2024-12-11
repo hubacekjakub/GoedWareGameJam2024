@@ -1,11 +1,9 @@
 extends Control
 
+@onready var version_label: Label = get_node("MarginContainer/HBoxContainer/LeftVBoxContainer/MainMenuVBox/VersionLabel")
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	version_label.text = Global.get_version()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_start_button_pressed() -> void:
+		Global.goto_scene("res://maps/storyboard.tscn")
