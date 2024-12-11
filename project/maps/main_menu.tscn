@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1seh7j32k3e6"]
+[gd_scene load_steps=3 format=3 uid="uid://b1seh7j32k3e6"]
 
+[ext_resource type="Script" path="res://maps/scripts/main_menu.gd" id="1_8musf"]
 [ext_resource type="Texture2D" uid="uid://dnvpv283gywkn" path="res://assets/pocketwatch/pocketwatch.png" id="1_11whw"]
 
 [node name="MainMenu" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8musf")
 
 [node name="BackgroundTexture" type="TextureRect" parent="."]
 layout_mode = 1
