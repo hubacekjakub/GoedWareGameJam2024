@@ -19,11 +19,17 @@ func _on_scene_finished(anim_name):
     print("Scene finished with animation:", anim_name)
     current_scene_index += 1
     if current_scene_index < scene_players.size():
-        camera.position.x += 750  # Move the camera by 750 on the x-axis
         _play_scene(current_scene_index)
+    else:
+        _go_to_main_menu()
 
 # Custom function to play a scene by index
 func _play_scene(index: int):
     if index >= 0 and index < scene_players.size():
+        camera.position.x = scene_players[index].position.x  # Move the camera to the scene's position
         scene_players[index].play()
         scene_players[index].connect("scene_finished", Callable(self, "_on_scene_finished"))
+
+# Custom function to go to the main menu
+func _go_to_main_menu():
+    get_tree().change_scene("res://path/to/main_menu.tscn")  # Replace with the actual path to the main menu scene
