@@ -32,4 +32,4 @@ func _play_scene(index: int):
 
 # Custom function to go to the main menu
 func _go_to_main_menu():
-    get_tree().change_scene("res://path/to/main_menu.tscn")  # Replace with the actual path to the main menu scene
+    Global.goto_scene("res://maps/main_menu.tscn")
