@@ -1,6 +1,6 @@
 extends Camera2D
 
-@export var rotation_speed: float = 1
+@export var rotation_speed: float = 0.1
 
 func _input(event):
 	if event is InputEventMouseMotion:

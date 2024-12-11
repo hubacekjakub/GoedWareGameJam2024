@@ -35,7 +35,7 @@ scene_players = [NodePath("Node/Loop1/Again"), NodePath("Node/Loop1/Pocketwatch"
 anchor_mode = 0
 ignore_rotation = false
 script = ExtResource("2_nm4f6")
-rotation_speed = 0.1
+rotation_speed = 0.01
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
