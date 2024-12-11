@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjawkp4dphmp1"]
+
+[ext_resource type="Script" path="res://scripts/scene.gd" id="1_5q4p7"]
+[ext_resource type="Texture2D" uid="uid://luqp5ltrnd3p" path="res://assets/Button/tablet-BARE.png" id="2_ggeef"]
+[ext_resource type="Texture2D" uid="uid://dermibfeqltss" path="res://assets/Button/restart-button-red-export.png" id="3_xa2jh"]
+[ext_resource type="Texture2D" uid="uid://bnt5w2lynu3nv" path="res://assets/Button/restart-button-green-export.png" id="4_b7lg5"]
+
+[sub_resource type="Animation" id="Animation_kyree"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_wpxgh"]
+resource_name = "story"
+length = 2.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
+_data = {
+"RESET": SubResource("Animation_kyree"),
+"story": SubResource("Animation_wpxgh")
+}
+
+[node name="Scene2" type="Node2D"]
+script = ExtResource("1_5q4p7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3ybw6")
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Tablet-export" type="Sprite2D" parent="Node2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_ggeef")
+centered = false
+
+[node name="Restart-button-red-export" type="Sprite2D" parent="Node2D"]
+visible = false
+texture = ExtResource("3_xa2jh")
+centered = false
+
+[node name="Restart-button-green-export" type="Sprite2D" parent="Node2D"]
+visible = false
+texture = ExtResource("4_b7lg5")
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D"]
+offset_left = 125.0
+offset_top = 60.0
+offset_right = 395.0
+offset_bottom = 258.0
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[center]
+[color=cf573c] [b]EMERGENCY[/b] [/color]
+
+[i]DEATH OF THE SUBJECT[/i]
+
+[color=cf573c] [b]RESTART IN:[/b] [/color]
+
+
+[/center]"

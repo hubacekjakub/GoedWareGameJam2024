@@ -11,7 +11,6 @@ length = 0.001
 
 [sub_resource type="Animation" id="Animation_wpxgh"]
 resource_name = "story"
-length = 2.0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
 _data = {

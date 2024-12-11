@@ -1,15 +1,32 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkrmm0i7y20xa"]
+[gd_scene load_steps=24 format=3 uid="uid://bkrmm0i7y20xa"]
 
 [ext_resource type="Script" path="res://maps/scripts/storyboard.gd" id="1_vkcqr"]
 [ext_resource type="PackedScene" uid="uid://yiuni3wf04ak" path="res://maps/scenes/loop1/loop1_sceen1_pocketwatch.tscn" id="1_x5464"]
 [ext_resource type="PackedScene" uid="uid://cprhoc8jtenqf" path="res://maps/scenes/loop1/loop1_sceen2_explosion.tscn" id="2_7g0m8"]
+[ext_resource type="PackedScene" uid="uid://t7irow71vp0v" path="res://maps/scenes/loop1/loop1_sceen0_again.tscn" id="2_nsoxh"]
 [ext_resource type="PackedScene" uid="uid://xk5j2ohb8v4f" path="res://maps/scenes/loop1/loop1_sceen3_landscape.tscn" id="3_47ac5"]
 [ext_resource type="PackedScene" uid="uid://bysxf23bjs3yr" path="res://maps/scenes/loop1/loop1_sceen4_character.tscn" id="4_635hy"]
 [ext_resource type="PackedScene" uid="uid://cnapwl7jhpjp" path="res://maps/scenes/loop1/loop1_sceen5_button.tscn" id="5_5k7du"]
+[ext_resource type="PackedScene" uid="uid://bgcggwaoskk48" path="res://maps/scenes/loop1/loop1_sceen6_flash.tscn" id="8_415qy"]
+[ext_resource type="PackedScene" uid="uid://tivan5pptt1l" path="res://maps/scenes/loop1/loop2_sceen0_again.tscn" id="9_xwlle"]
+[ext_resource type="PackedScene" uid="uid://begiy4vsjpq6k" path="res://maps/scenes/loop1/loop2_sceen1_pocketwatch.tscn" id="10_k1eqa"]
+[ext_resource type="PackedScene" uid="uid://cxhvkj5atbvjv" path="res://maps/scenes/loop1/loop2_sceen3_landscape.tscn" id="11_swgc2"]
+[ext_resource type="PackedScene" uid="uid://bjorfj2ky2t0f" path="res://maps/scenes/loop1/loop2_sceen4_character.tscn" id="12_o0nyj"]
+[ext_resource type="PackedScene" uid="uid://b5d0slf3msi8u" path="res://maps/scenes/loop1/loop2_sceen5_button.tscn" id="13_rtsrx"]
+[ext_resource type="PackedScene" uid="uid://cqr5r1v86moko" path="res://maps/scenes/loop1/loop3_sceen1_pocketwatch.tscn" id="14_drmna"]
+[ext_resource type="PackedScene" uid="uid://brs2yw72wowpp" path="res://maps/scenes/loop1/loop3_sceen3_landscape.tscn" id="15_ubph7"]
+[ext_resource type="PackedScene" uid="uid://cqj4rb6nqix2w" path="res://maps/scenes/loop1/loop3_sceen4_character.tscn" id="16_31coy"]
+[ext_resource type="PackedScene" uid="uid://cb0xmw6edncv6" path="res://maps/scenes/loop1/loop3_sceen5_button.tscn" id="17_m1ief"]
+[ext_resource type="PackedScene" uid="uid://b7oipsinbs34m" path="res://maps/scenes/loop1/loop4_sceen1_pocketwatch.tscn" id="18_vrv02"]
+[ext_resource type="PackedScene" uid="uid://cj0tt8d76jq5p" path="res://maps/scenes/loop1/loop4_sceen3_landscape.tscn" id="19_yejy3"]
+[ext_resource type="PackedScene" uid="uid://51tbt7l4gfwg" path="res://maps/scenes/loop1/loop4_sceen4_character.tscn" id="20_3b1x5"]
+[ext_resource type="PackedScene" uid="uid://c5xlio1ulq8ro" path="res://maps/scenes/loop1/loop4_sceen7_button.tscn" id="21_budqq"]
+[ext_resource type="PackedScene" uid="uid://b4wixiclqllxm" path="res://maps/scenes/loop1/loop4_sceen5_knife.tscn" id="21_gqc5g"]
+[ext_resource type="PackedScene" uid="uid://c885j0l4fb7jh" path="res://maps/scenes/loop1/loop4_sceen6_death.tscn" id="22_gyl2b"]
 
 [node name="Storyboard" type="Node2D" node_paths=PackedStringArray("scene_players")]
 script = ExtResource("1_vkcqr")
-scene_players = [NodePath("Node/Loop1/Pocketwatch"), NodePath("Node/Loop1/Explosion"), NodePath("Node/Loop1/Landscape"), NodePath("Node/Loop1/Character"), NodePath("Node/Loop1/Button")]
+scene_players = [NodePath("Node/Loop1/Again"), NodePath("Node/Loop1/Pocketwatch"), NodePath("Node/Loop1/Explosion"), NodePath("Node/Loop1/Landscape"), NodePath("Node/Loop1/Character"), NodePath("Node/Loop1/Button"), NodePath("Node/Loop1/Flash"), NodePath("Node/Loop2/Again2"), NodePath("Node/Loop2/Pocketwatch2"), NodePath("Node/Loop2/Landscape2"), NodePath("Node/Loop2/Character2"), NodePath("Node/Loop2/Button2"), NodePath("Node/Loop2/Flash2"), NodePath("Node/Loop3/Again3"), NodePath("Node/Loop3/Pocketwatch3"), NodePath("Node/Loop3/Landscape3"), NodePath("Node/Loop3/Character3"), NodePath("Node/Loop3/Button3"), NodePath("Node/Loop3/Flash3"), NodePath("Node/Loop4/Again4"), NodePath("Node/Loop4/Pocketwatch4"), NodePath("Node/Loop4/Landscape4"), NodePath("Node/Loop4/Character4"), NodePath("Node/Loop4/Knife4"), NodePath("Node/Loop4/Death4"), NodePath("Node/Loop4/Button4")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -22,16 +39,86 @@ anchor_mode = 0
 
 [node name="Loop1" type="Node2D" parent="Node"]
 
-[node name="Pocketwatch" parent="Node/Loop1" instance=ExtResource("1_x5464")]
+[node name="Again" parent="Node/Loop1" instance=ExtResource("2_nsoxh")]
+position = Vector2(0, 1)
 
-[node name="Explosion" parent="Node/Loop1" instance=ExtResource("2_7g0m8")]
+[node name="Pocketwatch" parent="Node/Loop1" instance=ExtResource("1_x5464")]
 position = Vector2(750, 0)
 
-[node name="Landscape" parent="Node/Loop1" instance=ExtResource("3_47ac5")]
+[node name="Explosion" parent="Node/Loop1" instance=ExtResource("2_7g0m8")]
 position = Vector2(1500, 0)
 
-[node name="Character" parent="Node/Loop1" instance=ExtResource("4_635hy")]
+[node name="Landscape" parent="Node/Loop1" instance=ExtResource("3_47ac5")]
 position = Vector2(2250, 0)
 
-[node name="Button" parent="Node/Loop1" instance=ExtResource("5_5k7du")]
+[node name="Character" parent="Node/Loop1" instance=ExtResource("4_635hy")]
 position = Vector2(3000, 0)
+
+[node name="Button" parent="Node/Loop1" instance=ExtResource("5_5k7du")]
+position = Vector2(3750, 0)
+
+[node name="Flash" parent="Node/Loop1" instance=ExtResource("8_415qy")]
+position = Vector2(4547, 16)
+
+[node name="Loop2" type="Node2D" parent="Node"]
+
+[node name="Again2" parent="Node/Loop2" instance=ExtResource("9_xwlle")]
+position = Vector2(-9, 559)
+
+[node name="Pocketwatch2" parent="Node/Loop2" instance=ExtResource("10_k1eqa")]
+position = Vector2(788, 568)
+
+[node name="Landscape2" parent="Node/Loop2" instance=ExtResource("11_swgc2")]
+position = Vector2(2248, 604)
+
+[node name="Character2" parent="Node/Loop2" instance=ExtResource("12_o0nyj")]
+position = Vector2(3031, 577)
+
+[node name="Button2" parent="Node/Loop2" instance=ExtResource("13_rtsrx")]
+position = Vector2(3792, 630)
+
+[node name="Flash2" parent="Node/Loop2" instance=ExtResource("8_415qy")]
+position = Vector2(4572, 621)
+
+[node name="Loop3" type="Node2D" parent="Node"]
+
+[node name="Again3" parent="Node/Loop3" instance=ExtResource("9_xwlle")]
+position = Vector2(9, 1080)
+
+[node name="Pocketwatch3" parent="Node/Loop3" instance=ExtResource("14_drmna")]
+position = Vector2(781, 1079)
+
+[node name="Landscape3" parent="Node/Loop3" instance=ExtResource("15_ubph7")]
+position = Vector2(2247, 1137)
+
+[node name="Character3" parent="Node/Loop3" instance=ExtResource("16_31coy")]
+position = Vector2(3046, 1143)
+
+[node name="Button3" parent="Node/Loop3" instance=ExtResource("17_m1ief")]
+position = Vector2(3801, 1154)
+
+[node name="Flash3" parent="Node/Loop3" instance=ExtResource("8_415qy")]
+position = Vector2(4565, 1154)
+
+[node name="Loop4" type="Node2D" parent="Node"]
+
+[node name="Again4" parent="Node/Loop4" instance=ExtResource("9_xwlle")]
+position = Vector2(0, 1562)
+
+[node name="Pocketwatch4" parent="Node/Loop4" instance=ExtResource("18_vrv02")]
+position = Vector2(789, 1565)
+
+[node name="Landscape4" parent="Node/Loop4" instance=ExtResource("19_yejy3")]
+position = Vector2(2249, 1583)
+
+[node name="Character4" parent="Node/Loop4" instance=ExtResource("20_3b1x5")]
+position = Vector2(3038, 1596)
+
+[node name="Knife4" parent="Node/Loop4" instance=ExtResource("21_gqc5g")]
+position = Vector2(3800, 1612)
+
+[node name="Death4" parent="Node/Loop4" instance=ExtResource("22_gyl2b")]
+position = Vector2(4596, 1613)
+
+[node name="Button4" parent="Node/Loop4" instance=ExtResource("21_budqq")]
+position = Vector2(5361, 1609)

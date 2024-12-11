@@ -27,6 +27,7 @@ func _on_scene_finished(anim_name):
 func _play_scene(index: int):
     if index >= 0 and index < scene_players.size():
         camera.position.x = scene_players[index].position.x  # Move the camera to the scene's position
+        camera.position.y = scene_players[index].position.y
         scene_players[index].play()
         scene_players[index].connect("scene_finished", Callable(self, "_on_scene_finished"))
 

@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4wixiclqllxm"]
+
+[ext_resource type="Script" path="res://scripts/scene.gd" id="1_cafle"]
+[ext_resource type="Texture2D" uid="uid://c6vsarkl4ji5" path="res://assets/character/brackgrounds4.png" id="2_wm48g"]
+[ext_resource type="Texture2D" uid="uid://j1a8mivy2sxb" path="res://assets/character/knife6.png" id="3_mkypw"]
+
+[sub_resource type="Animation" id="Animation_kyree"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_wpxgh"]
+resource_name = "story"
+length = 2.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
+_data = {
+"RESET": SubResource("Animation_kyree"),
+"story": SubResource("Animation_wpxgh")
+}
+
+[node name="Scene2" type="Node2D"]
+script = ExtResource("1_cafle")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3ybw6")
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Brackgrounds4" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("2_wm48g")
+centered = false
+
+[node name="Knife6" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("3_mkypw")
+centered = false
