@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bkrmm0i7y20xa"]
+[gd_scene load_steps=25 format=3 uid="uid://bkrmm0i7y20xa"]
 
 [ext_resource type="Script" path="res://maps/scripts/storyboard.gd" id="1_vkcqr"]
 [ext_resource type="PackedScene" uid="uid://yiuni3wf04ak" path="res://maps/scenes/loop1/loop1_sceen1_pocketwatch.tscn" id="1_x5464"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://c5xlio1ulq8ro" path="res://maps/scenes/loop1/loop4_sceen7_button.tscn" id="21_budqq"]
 [ext_resource type="PackedScene" uid="uid://b4wixiclqllxm" path="res://maps/scenes/loop1/loop4_sceen5_knife.tscn" id="21_gqc5g"]
 [ext_resource type="PackedScene" uid="uid://c885j0l4fb7jh" path="res://maps/scenes/loop1/loop4_sceen6_death.tscn" id="22_gyl2b"]
+[ext_resource type="AudioStream" uid="uid://i2s6e7pjpcnr" path="res://assets/sounds/cutscene-draft.mp3" id="24_if4m5"]
 
 [node name="Storyboard" type="Node2D" node_paths=PackedStringArray("scene_players")]
 script = ExtResource("1_vkcqr")
@@ -122,3 +123,7 @@ position = Vector2(4596, 1613)
 
 [node name="Button4" parent="Node/Loop4" instance=ExtResource("21_budqq")]
 position = Vector2(5361, 1609)
+
+[node name="MainAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_if4m5")
+autoplay = true

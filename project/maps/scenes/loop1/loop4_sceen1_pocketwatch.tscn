@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7oipsinbs34m"]
+[gd_scene load_steps=10 format=3 uid="uid://b7oipsinbs34m"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_qrd2f"]
 [ext_resource type="Texture2D" uid="uid://dnvpv283gywkn" path="res://assets/pocketwatch/pocketwatch.png" id="2_dwcey"]
 [ext_resource type="Texture2D" uid="uid://br34ted7tcslv" path="res://assets/pocketwatch/pocketwatch-hand-cut.png" id="3_4hyvn"]
 [ext_resource type="Texture2D" uid="uid://dt2sfehqd7yjp" path="res://assets/pocketwatch/bloodstains_for_watch1.png" id="4_pf3tr"]
 [ext_resource type="Texture2D" uid="uid://88ndu1dygh70" path="res://assets/pocketwatch/cracks_for_watch1.png" id="5_n1238"]
+[ext_resource type="AudioStream" uid="uid://ce7ae2xxsjlgx" path="res://assets/sounds/STCR2_ML_Percussion_One_Shot_Tick.wav" id="6_df6pu"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
@@ -19,6 +20,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_wpxgh"]
@@ -35,6 +48,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 0.0, 0.0698132, 0.0698132, 0.139626, 0.139626, 0.20944, 0.20944, 0.279253, 0.279253, 0.349066]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8, 1.7, 2.6, 3.5, 4.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
@@ -70,3 +95,7 @@ centered = false
 [node name="CracksForWatch1" type="Sprite2D" parent="Node2D"]
 texture = ExtResource("5_n1238")
 centered = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_df6pu")
+bus = &"Effects"
