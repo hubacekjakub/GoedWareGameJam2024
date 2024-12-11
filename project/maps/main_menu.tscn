@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1seh7j32k3e6"]
+[gd_scene load_steps=4 format=3 uid="uid://b1seh7j32k3e6"]
 
 [ext_resource type="Script" path="res://maps/scripts/main_menu.gd" id="1_8musf"]
 [ext_resource type="Texture2D" uid="uid://dnvpv283gywkn" path="res://assets/pocketwatch/pocketwatch.png" id="1_11whw"]
+[ext_resource type="AudioStream" uid="uid://ce7ae2xxsjlgx" path="res://assets/sounds/STCR2_ML_Percussion_One_Shot_Tick.wav" id="3_bp3s5"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -85,4 +86,14 @@ Meru"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_bp3s5")
+autoplay = true
+bus = &"Effects"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/LeftVBoxContainer/MainMenuVBox/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
