@@ -317,22 +317,26 @@ centered = false
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(241, 234)
 sprite_frames = SubResource("SpriteFrames_y6ror")
+autoplay = "default"
 frame_progress = 0.666636
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(311, 234)
 sprite_frames = SubResource("SpriteFrames_y6ror")
+autoplay = "default"
 frame_progress = 0.237511
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(280, 226)
 sprite_frames = SubResource("SpriteFrames_y6ror")
+autoplay = "default"
 frame_progress = 0.216639
 
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(170, 319)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_y6ror")
+autoplay = "default"
 frame_progress = 0.580417
 
 [node name="ColorRect" type="ColorRect" parent="Node2D"]
