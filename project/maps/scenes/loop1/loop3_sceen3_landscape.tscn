@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://brs2yw72wowpp"]
+[gd_scene load_steps=16 format=3 uid="uid://brs2yw72wowpp"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_xpli4"]
 [ext_resource type="Texture2D" uid="uid://dphf5ej5vreak" path="res://assets/character/head-head-BACKGROUND4.png" id="2_3xn5e"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://4dbbbbh5dgq8" path="res://assets/landscape/intro-1-foreground-2.png" id="6_elviu"]
 [ext_resource type="Shader" path="res://shaders/tv_screen.gdshader" id="8_00d6n"]
 [ext_resource type="PackedScene" uid="uid://brjfldw8xqh1o" path="res://scenes/fire_particle.tscn" id="9_pklff"]
+[ext_resource type="AudioStream" uid="uid://tmj78of1i5rf" path="res://assets/sounds/SAMPLIFIRE_fx_ambiance_crowd_screams.wav" id="9_rca6n"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
 length = 0.001
@@ -35,10 +36,10 @@ tracks/0/path = NodePath("AudioStreamPlayer:playing")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
@@ -150,3 +151,7 @@ offset_right = 638.0
 offset_bottom = 370.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_rca6n")
+bus = &"Effects"
