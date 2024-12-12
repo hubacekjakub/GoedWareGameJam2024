@@ -16,7 +16,7 @@ config/description="Pocketwatch is a 60-second cutscene about a time loop. Our h
 In this cutscene, you'll see the hero's struggle and determination to save the day, even if it means sacrificing himself. The ticking clock adds to the urgency and suspense, making every second count.
 
 Join us in this thrilling journey where time is both the enemy and the key to victory. Created for the GoedWare Game Jam Cutscene Edition, Pocketwatch showcases the power of storytelling in a short, impactful format."
-config/version="1.0.0"
+config/version="1.0.1"
 config/tags=PackedStringArray("2d", "platformer", "cinematic")
 run/main_scene="res://maps/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
