@@ -45,7 +45,7 @@ _data = {
 "story": SubResource("Animation_wpxgh")
 }
 
-[node name="Scene5" type="Node2D"]
+[node name="Scene2" type="Node2D"]
 script = ExtResource("1_5ln5c")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

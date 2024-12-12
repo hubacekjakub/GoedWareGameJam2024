@@ -58,10 +58,10 @@ tracks/0/keys = {
 "times": PackedFloat32Array(1, 2, 3, 4, 5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": ["9", "8
-", "7
+"values": ["8", "7
 ", "6
 ", "5
+", "4
 "]
 }
 tracks/1/type = "value"
@@ -83,10 +83,10 @@ tracks/2/path = NodePath("AudioStreamPlayer:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [true]
+"values": [true, true, true, true, true, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ybw6"]
