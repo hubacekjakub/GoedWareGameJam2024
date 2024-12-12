@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://brs2yw72wowpp"]
+[gd_scene load_steps=14 format=3 uid="uid://brs2yw72wowpp"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_xpli4"]
 [ext_resource type="Texture2D" uid="uid://dphf5ej5vreak" path="res://assets/character/head-head-BACKGROUND4.png" id="2_3xn5e"]
@@ -48,30 +48,6 @@ _data = {
 "story": SubResource("Animation_wpxgh")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hri45"]
-shader = ExtResource("8_00d6n")
-shader_parameter/overlay = true
-shader_parameter/scanlines_opacity = 1.0
-shader_parameter/scanlines_width = 0.25
-shader_parameter/grille_opacity = 0.3
-shader_parameter/resolution = Vector2(640, 480)
-shader_parameter/pixelate = true
-shader_parameter/roll = true
-shader_parameter/roll_speed = 8.0
-shader_parameter/roll_size = 15.0
-shader_parameter/roll_variation = 1.8
-shader_parameter/distort_intensity = 0.05
-shader_parameter/noise_opacity = 0.4
-shader_parameter/noise_speed = 5.0
-shader_parameter/static_noise_intensity = 0.06
-shader_parameter/aberration = 0.03
-shader_parameter/brightness = 1.4
-shader_parameter/discolor = true
-shader_parameter/warp_amount = 1.0
-shader_parameter/clip_warp = false
-shader_parameter/vignette_intensity = 0.4
-shader_parameter/vignette_opacity = 0.5
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tncwb"]
 shader = ExtResource("8_00d6n")
 shader_parameter/overlay = true
@@ -103,14 +79,6 @@ script = ExtResource("1_xpli4")
 libraries = {
 "": SubResource("AnimationLibrary_3ybw6")
 }
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-material = SubResource("ShaderMaterial_hri45")
-offset_left = 86.0
-offset_right = 639.0
-offset_bottom = 311.0
 
 [node name="Node2D" type="Node2D" parent="."]
 
