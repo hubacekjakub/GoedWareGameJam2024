@@ -50,7 +50,8 @@ alignment = 2
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/LeftVBoxContainer/MainMenuVBox"]
 layout_mode = 2
 size_flags_vertical = 8
-text = "Tick Tack"
+text = "Pocketwatch
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
