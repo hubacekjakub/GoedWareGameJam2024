@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cxhvkj5atbvjv"]
+[gd_scene load_steps=22 format=3 uid="uid://cxhvkj5atbvjv"]
 
 [ext_resource type="Script" path="res://scripts/scene.gd" id="1_80k33"]
 [ext_resource type="Texture2D" uid="uid://c2oxmqf086ece" path="res://assets/landscape/sky-blue.png" id="2_fy3dw"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://4dbbbbh5dgq8" path="res://assets/landscape/intro-1-foreground-2.png" id="6_s7mk6"]
 [ext_resource type="Texture2D" uid="uid://bgwhamqcfqpfb" path="res://assets/landscape/tent-for-apocalypse2.png" id="7_etqda"]
 [ext_resource type="Shader" path="res://shaders/tv_screen.gdshader" id="8_q52f3"]
+[ext_resource type="Texture2D" uid="uid://kk5k88ydkflf" path="res://assets/landscape/running_with_bow.png" id="8_x4o0i"]
 [ext_resource type="AudioStream" uid="uid://dcgbj6osxm5tm" path="res://assets/sounds/thunderstorm.wav" id="8_yq82a"]
 
 [sub_resource type="Animation" id="Animation_kyree"]
@@ -46,6 +47,56 @@ _data = {
 "RESET": SubResource("Animation_kyree"),
 "story": SubResource("Animation_wpxgh")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dkqm"]
+atlas = ExtResource("8_x4o0i")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxtp7"]
+atlas = ExtResource("8_x4o0i")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8bwg"]
+atlas = ExtResource("8_x4o0i")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f6yb"]
+atlas = ExtResource("8_x4o0i")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7tdc"]
+atlas = ExtResource("8_x4o0i")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4ad7"]
+atlas = ExtResource("8_x4o0i")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wgqbe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dkqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxtp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8bwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f6yb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7tdc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4ad7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_npk85"]
 shader = ExtResource("8_q52f3")
@@ -105,7 +156,22 @@ centered = false
 texture = ExtResource("7_etqda")
 centered = false
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(515, 246)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_wgqbe")
+autoplay = "default"
+frame_progress = 0.893443
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(542, 276)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_wgqbe")
+autoplay = "default"
+frame_progress = 0.78427
+
 [node name="ColorRect" type="ColorRect" parent="Node2D"]
+visible = false
 material = SubResource("ShaderMaterial_npk85")
 offset_right = 638.0
 offset_bottom = 370.0
